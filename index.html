@@ -1,0 +1,155 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arianis - Mis 20 Años</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rose-gold: #e5b3a3;
+            --neon-pink: #ff2d75;
+        }
+        body {
+            background-color: #fdf2f5;
+            font-family: 'Montserrat', sans-serif;
+            color: #5d4037;
+            overflow-x: hidden;
+        }
+        .neon-title {
+            font-family: 'Dancing Script', cursive;
+            color: #fff;
+            text-shadow: 
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px var(--neon-pink),
+                0 0 42px var(--neon-pink),
+                0 0 82px var(--neon-pink);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(231, 166, 166, 0.2);
+        }
+        .balloons-bg {
+            background-image: url('https://www.transparenttextures.com/patterns/puffy-puffs.png');
+            background-attachment: fixed;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .animate-pulse-soft {
+            animation: pulse 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="balloons-bg">
+    <!-- Decoración de fondo inspirada en la foto -->
+    <div class="fixed inset-0 pointer-events-none">
+        <div class="absolute -top-20 -left-20 w-80 h-80 bg-pink-200 rounded-full blur-[100px] opacity-50"></div>
+        <div class="absolute top-1/2 -right-20 w-96 h-96 bg-orange-100 rounded-full blur-[120px] opacity-50"></div>
+    </div>
+
+    <div class="relative max-w-md mx-auto px-6 py-12 flex flex-col items-center">
+        <!-- Encabezado Estilo Foto -->
+        <div class="text-center mb-10">
+            <h3 class="text-[10px] tracking-[0.5em] uppercase font-bold text-pink-300 mb-4 italic">Happy Birthday</h3>
+            <h1 class="text-7xl neon-title mb-4">Arianis</h1>
+            <div class="inline-block relative">
+                <div class="absolute inset-0 bg-white blur-lg opacity-30"></div>
+                <div class="relative bg-white/80 border-2 border-pink-100 px-8 py-2 rounded-2xl shadow-xl transform -rotate-3">
+                    <span class="text-4xl font-bold text-pink-400 font-serif">20</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contador Regresivo -->
+        <div class="w-full glass-card rounded-[2.5rem] p-6 grid grid-cols-4 gap-2 mb-10 text-center border-rose-50 shadow-inner">
+            <div>
+                <span id="days" class="text-2xl font-bold text-pink-500">00</span>
+                <p class="text-[8px] uppercase font-bold text-pink-300">Días</p>
+            </div>
+            <div>
+                <span id="hours" class="text-2xl font-bold text-pink-500">00</span>
+                <p class="text-[8px] uppercase font-bold text-pink-300">Horas</p>
+            </div>
+            <div>
+                <span id="mins" class="text-2xl font-bold text-pink-500">00</span>
+                <p class="text-[8px] uppercase font-bold text-pink-300">Mins</p>
+            </div>
+            <div>
+                <span id="secs" class="text-2xl font-bold text-pink-500">00</span>
+                <p class="text-[8px] uppercase font-bold text-pink-300">Segs</p>
+            </div>
+        </div>
+
+        <!-- Info Evento Estilo Elegante -->
+        <div class="w-full space-y-5 mb-10">
+            <div class="glass-card p-5 rounded-3xl flex items-center gap-5">
+                <div class="w-12 h-12 bg-pink-50 rounded-2xl flex items-center justify-center text-2xl shadow-sm">📅</div>
+                <div>
+                    <p class="text-[9px] uppercase font-bold text-pink-300 tracking-widest">Fecha Especial</p>
+                    <p class="text-lg font-semibold text-gray-700 italic">Sábado, 23 de Mayo</p>
+                </div>
+            </div>
+            <div class="glass-card p-5 rounded-3xl flex items-center gap-5">
+                <div class="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center text-2xl shadow-sm">⏰</div>
+                <div>
+                    <p class="text-[9px] uppercase font-bold text-orange-300 tracking-widest">Hora</p>
+                    <p class="text-lg font-semibold text-gray-700 italic">08:00 PM</p>
+                </div>
+            </div>
+            <div class="glass-card p-5 rounded-3xl flex items-center gap-5">
+                <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-2xl shadow-sm">📍</div>
+                <div>
+                    <p class="text-[9px] uppercase font-bold text-blue-300 tracking-widest">Ubicación</p>
+                    <p class="text-lg font-semibold text-gray-700 italic">Mi Residencia</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Regalo Rosa/Oro -->
+        <div class="w-full bg-gradient-to-br from-pink-400 to-rose-500 p-8 rounded-[3rem] text-white text-center shadow-2xl shadow-pink-200 mb-10">
+            <div class="text-4xl mb-4 animate-pulse-soft">🎁</div>
+            <h3 class="text-xl font-bold mb-2">Opción de Regalo</h3>
+            <p class="text-sm font-light opacity-90 leading-relaxed mb-6 italic">Tu presencia es el mejor regalo, pero si deseas tener un detalle conmigo, será bienvenido.</p>
+            <div class="inline-block bg-white/20 px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] border border-white/30">Lluvia de Sobres</div>
+        </div>
+
+        <!-- Confirmación -->
+        <div class="w-full glass-card p-8 rounded-[3rem] text-center border-pink-100 mb-10">
+            <h3 class="text-xl font-bold text-pink-500 mb-6 italic">Confirmar Asistencia</h3>
+            <input type="text" placeholder="Tu nombre y apellido..." class="w-full bg-white/50 border-0 p-4 rounded-2xl text-sm mb-4 outline-none focus:ring-2 focus:ring-pink-200 transition-all text-center italic">
+            <button class="w-full bg-pink-500 text-white font-bold py-4 rounded-2xl shadow-lg shadow-pink-200 active:scale-95 transition-transform">Confirmar Cupo</button>
+        </div>
+
+        <footer class="text-center opacity-30 py-8">
+            <p class="text-[9px] font-bold tracking-[0.6em] uppercase">Arianis · 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        function updateTimer() {
+            const birthday = new Date('May 23, 2026 20:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = birthday - now;
+
+            if (distance > 0) {
+                document.getElementById('days').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+                document.getElementById('hours').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+                document.getElementById('mins').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+                document.getElementById('secs').innerText = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
+            }
+        }
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>
+
+```
